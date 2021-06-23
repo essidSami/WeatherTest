@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">WeatherTest</string>
+
+    <string name="txt_btn_go">GO</string>
+    <string name="txt_btn_ok">OK</string>
+    <string name="txt_btn_restart">Recommencer</string>
+
+    <string name="txt_city_rennes">Rennes</string>
+    <string name="txt_city_paris">Paris</string>
+    <string name="txt_city_nantes">Nantes</string>
+    <string name="txt_city_bordeaux">Bordeaux</string>
+    <string name="txt_city_lyon">Lyon</string>
+
+    <string name="txt_city_name">Ville</string>
+    <string name="txt_temperature">Température</string>
+    <string name="txt_cloud">Nuageuse</string>
+
+    <string name="txt_alert_title">Problème</string>
+    <string name="txt_alert_msg_ws">Réessayer plus tard</string>
+    <string name="txt_alert_msg_internet">Merci de vérifier votre connexion internet.</string>
+
+    <string name="txt_temperature_value">%1$.0f °C</string>
+
+    <string name="txt_msg_waiting_first">Nous téléchargeons les données…</string>
+    <string name="txt_msg_waiting_second">C’est presque fini…</string>
+    <string name="txt_msg_waiting_third">Plus que quelques secondes avant d’avoir le résultat…</string>
+</resources>

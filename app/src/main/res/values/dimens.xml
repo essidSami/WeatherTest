@@ -1,0 +1,7 @@
+<resources>
+    <dimen name="commun_top_bottom_margin">16dp</dimen>
+    <dimen name="commun_start_end_margin">16dp</dimen>
+    <dimen name="commun_padding_btn">25dp</dimen>
+    <dimen name="corner_radius">8dp</dimen>
+    <dimen name="padding_btn">8dp</dimen>
+</resources>

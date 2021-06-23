@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorChetwodeBlue">#FF8282DC</color>
+    <color name="colorChetwodeBlue_50">#808282DC</color>
+    <color name="colorBilobaFlower">#FFB2B3ED</color>
+    <color name="colorBilobaFlower_50">#80B2B3ED</color>
+    <color name="colorSanMarino">#FF476daf</color>
+    <color name="colorSanMarino_50">#FF476daf</color>
+    <color name="colorBlack">#FF000000</color>
+    <color name="colorBlack_50">#80000000</color>
+    <color name="colorWhite">#FFFFFFFF</color>
+    <color name="colorWhite_50">#80FFFFFF</color>
+    <color name="colorGallery">#FFEFEFEF</color>
+</resources>

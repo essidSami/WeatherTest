@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- ProgressBar -->
+    <style name="MProgressBar" parent="Widget.AppCompat.ProgressBar">
+        <item name="android:progressTint">@color/colorSanMarino</item>
+        <item name="android:indeterminateTint">@color/colorSanMarino</item>
+    </style>
+
+    <!-- ProgressBar Horizontal-->
+    <style name="horizontalProgressBarStyle" parent="@style/Widget.AppCompat.ProgressBar.Horizontal">
+        <item name="android:indeterminateDrawable">@drawable/progress_states</item>
+        <item name="android:minHeight">30dp</item>
+        <item name="android:maxHeight">30dp</item>
+    </style>
+
+    <!-- Custom Alert Style for error -->
+    <style name="CustomDialogStyleError" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowEnterAnimation">@null</item>
+        <item name="android:windowExitAnimation">@null</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowIsFloating">false</item>
+    </style>
+</resources>

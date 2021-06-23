@@ -1,0 +1,89 @@
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+ext {
+    kotlin_version = '1.5.10'
+    koin_version = '2.0.1'
+    androidx_version ='1.3.0'
+    androidx_legacy_version ='1.0.0'
+    constraint_layout_version ='2.0.4'
+    material_version ='1.4.0-rc01'
+    junit_version ='4.13.2'
+    espresso_version ='3.3.0'
+    retrofit_version = "2.5.0"
+    okhttp_version = "4.9.0"
+    stetho_version = "1.5.1"
+    recyclerview_version = "1.1.0"
+    glide_version = "4.12.0"
+    rxjava_version = "2.1.1"
+    couroutines_version = "1.5.0"
+    gson_version = "2.8.7"
+    legacy_version = "1.0.0"
+    multidex_version = "2.0.1"
+
+
+    mainApplication = [
+            kotlin:                     "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version",
+
+            // Androidx
+            appCompat:                  "androidx.appcompat:appcompat:$androidx_version",
+            coreKtx :                   "androidx.core:core-ktx:$androidx_version",
+            constraintLayout:           "androidx.constraintlayout:constraintlayout:$constraint_layout_version",
+
+            // Koin (Dependency injection framework for Kotlin)
+            koin :                      "org.koin:koin-android:$koin_version",
+            koinViewModel :             "org.koin:koin-android-viewmodel:$koin_version",
+
+            //Retrofit
+            retrofit :                  "com.squareup.retrofit2:retrofit:$retrofit_version",
+            retrofitAdapter :           "com.squareup.retrofit2:adapter-rxjava2:$retrofit_version",
+            retrofitConverterGson :     "com.squareup.retrofit2:converter-gson:$retrofit_version",
+            retrofitConverterScalar :   "com.squareup.retrofit2:converter-scalars:$retrofit_version",
+
+            //OkHttp
+            okhttp :                    "com.squareup.okhttp3:okhttp:$okhttp_version",
+            okhttpLoggingInterceptor :  "com.squareup.okhttp3:logging-interceptor:$okhttp_version",
+            stethoOkhttp :              "com.facebook.stetho:stetho-okhttp3:$stetho_version",
+
+            //RecyclerView
+            recyvlerView :              "androidx.recyclerview:recyclerview:$recyclerview_version",
+
+            //Glide
+            glide :                     "com.github.bumptech.glide:glide:$glide_version",
+
+            //Material Design
+            materialDesign :            "com.google.android.material:material:$material_version",
+
+            //RxJava
+            rxJava :                    "io.reactivex.rxjava2:rxandroid:$rxjava_version",
+
+            //MultiDex
+            multiDex :                  "androidx.multidex:multidex:$multidex_version",
+
+            // Legacy Support
+            legacySupport :             "androidx.legacy:legacy-support-v4:$androidx_legacy_version",
+
+            // Kotlin couroutines
+
+            coroutinesCore:             "org.jetbrains.kotlinx:kotlinx-coroutines-core:$couroutines_version",
+            coroutinesAndroid :         "org.jetbrains.kotlinx:kotlinx-coroutines-android:$couroutines_version",
+            gson :                      "com.google.code.gson:gson:$gson_version",
+    ]
+
+    unitTesting = [
+            kotlin:                     "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version",
+            kotlinTest:                 "org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version",
+            junit:                      "junit:junit:$junit_version",
+
+    ]
+
+    acceptanceTesting = [
+            espressoCore:               "androidx.test.espresso:espresso-core:$espresso_version",
+            espressoIntents:            "androidx.test.espresso:espresso-intents:$espresso_version",
+    ]
+}
+

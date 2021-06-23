@@ -1,0 +1,11 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="AppTheme.Base" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorChetwodeBlue</item>
+        <item name="colorPrimaryDark">@color/colorBilobaFlower</item>
+        <item name="colorAccent">@color/colorSanMarino</item>
+        <item name="android:textColorPrimary">@color/colorBlack</item>
+        <item name="android:windowBackground">@color/colorWhite</item>
+    </style>
+</resources>

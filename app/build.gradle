@@ -1,0 +1,122 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'kotlin-android-extensions'
+}
+apply from: '../config/dependencies.gradle'
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.3"
+
+    defaultConfig {
+        applicationId "com.sami.weathertest"
+        minSdkVersion 23
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        buildConfigField 'String', 'BASE_URL', '"https://api.openweathermap.org/data/2.5/"'
+        buildConfigField 'String', 'API_KEY', '"16b6b5948754b205be59e6f60f09d79b"'
+        buildConfigField 'String', 'IMG_URL', '"https://openweathermap.org/img/wn/"'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    androidExtensions {
+        experimental = true
+    }
+
+    buildFeatures {
+        viewBinding = true
+    }
+}
+
+dependencies {
+
+    def appDependencies = rootProject.ext.mainApplication
+    def unitTestDependencies = rootProject.ext.unitTesting
+    def acceptanceTestDependencies = rootProject.ext.acceptanceTesting
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    // Kotlin
+    implementation appDependencies.kotlin
+
+    // Androidx
+    implementation appDependencies.appCompat
+    implementation appDependencies.coreKtx
+    implementation appDependencies.constraintLayout
+
+    // Koin (Dependency injection framework for Kotlin)
+    //noinspection GradleDependency
+    implementation appDependencies.koin
+    //noinspection GradleDependency
+    implementation appDependencies.koinViewModel
+
+    // Androidx
+    implementation appDependencies.multiDex
+
+    //Retrofit
+    implementation appDependencies.retrofit
+    implementation appDependencies.retrofitAdapter
+    implementation ('com.squareup.retrofit2:converter-gson:2.5.0') {
+        exclude group: 'com.google.code.gson', module:'gson'
+    }
+    implementation appDependencies.retrofitConverterScalar
+
+    // gson
+    implementation appDependencies.gson
+
+    //okHttp
+    implementation appDependencies.okhttp
+    implementation appDependencies.okhttpLoggingInterceptor
+
+    //RecyclerView
+    implementation appDependencies.recyvlerView
+
+    //Glide
+    implementation appDependencies.glide
+
+    //Material Design
+    implementation appDependencies.materialDesign
+
+    //RxJava
+    implementation appDependencies.rxJava
+
+    //Legacy Support
+    implementation appDependencies.legacySupport
+
+    // Kotlin couroutines
+    api appDependencies.coroutinesCore
+    api appDependencies.coroutinesAndroid
+
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    implementation 'com.android.support:multidex:1.0.3'
+
+    // Unit testing
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    testImplementation unitTestDependencies.kotlin
+    testImplementation unitTestDependencies.kotlinTest
+    testImplementation unitTestDependencies.junit
+
+    // UI testing
+    androidTestImplementation acceptanceTestDependencies.espressoCore
+    androidTestImplementation acceptanceTestDependencies.espressoIntents
+
+}
